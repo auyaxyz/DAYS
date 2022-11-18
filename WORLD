@@ -1,4 +1,9 @@
-game:GetService("Lighting").ClockTime = 12
+game:GetService("Lighting").ClockTime = 14
 game:GetService("Lighting"):GetPropertyChangedSignal("ClockTime"):Connect(function()
-    game:GetService("Lighting").ClockTime = 12
+    game:GetService("Lighting").ClockTime = 14
+
+game.Lighting.Changed:connect(function()
+    game.Lighting.TimeOfDay = "12:00:00"
+    game.Lighting.FogEnd = 9999
+    game.Lighting.Brightness = 2
 end)
